@@ -1,0 +1,15 @@
+body {
+    background-color: #f5f5f5; 
+    font-family: Georgia, serif; 
+}
+#hoved {
+    width: 60%;                  /* bredde: 60 % av vinduet */
+    margin: 100px auto;          /* 100 px over elementet, auto midtstiller det */
+    padding: 40px;               /* luft mellom kantlinjene og innholdet */
+    background-color: white;   /* hvit bakgrunnsfarge */
+    border: 1px solid #cccccc; /* grå kantlinje */
+}
+
+h1, h2 {
+    font-family: 'Roboto', sans-serif;
+}
