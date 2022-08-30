@@ -1,15 +1,89 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #f5f5f5; 
     font-family: Georgia, serif; 
 }
+
 #hoved {
     width: 60%;                  /* bredde: 60 % av vinduet */
     margin: 100px auto;          /* 100 px over elementet, auto midtstiller det */
     padding: 40px;               /* luft mellom kantlinjene og innholdet */
     background-color: white;   /* hvit bakgrunnsfarge */
-    border: 1px solid #cccccc; /* grå kantlinje */
+    border: 2px solid #cccccc; /* grå kantlinje */
+    border-radius: 10px;
+}
+
+.uthevetSitat {
+    background-color: rgb(232, 182, 182);
+
 }
 
 h1, h2 {
     font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+p::first-letter {
+    font-size: 2.5em;
+}
+
+p {
+    text-align: justify;
+}
+
+button {
+    padding: 2em;
+    background-color: linear-gradient(90deg,transparent,#2196f3);
+    border-radius: 5px;
+    font-family: Consolas;
+    transition: background-color 2s ease-out 100ms;
+}
+
+button:hover {
+    background-color: red;
+}
+
+/*
+    Tabell
+*/
+table {
+    border-collapse: collapse;
+    border-bottom: 2px solid #3f4259;
+    margin-top: 20px;
+}
+th, td {
+    border: 1px solid #f6f5f4;
+    padding: 8px;
+}
+thead > tr {
+    background-color: #3f4259;
+    color: #f6f7fa;
+}
+tbody > tr:nth-child(odd) {
+    background-color: #f6f7fa;
+} 
+
+body {
+    background-color: #f5f5f5; 
+    font-family: Georgia, serif; 
+}
+#hoved2 {         
+    margin: 20px;         
+    padding: 20px;	             
+    background-color: white; 	 
+    border: 1px solid #cccccc;
+}
+h1 {
+    font-family: Arial, sans-serif; 
 }
