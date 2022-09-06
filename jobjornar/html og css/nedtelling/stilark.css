@@ -1,0 +1,19 @@
+h1 {
+    font-size: 6em;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex; /* Barna til body skal fylgje flexbox-reglar. */
+    flex-direction: row; /* NB: Standardinnstilling, må ikkje settast. */
+    justify-content: center; /* Når row, så er dette horisontalt midtstilt. */
+    align-items: center; /* Når row, så er dette vertikalt midtstilt. */
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+}
