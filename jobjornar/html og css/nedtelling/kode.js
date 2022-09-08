@@ -16,6 +16,6 @@ function tikk() {
     To-do:
     - endre stilark etter behov: eks. når 3 sek. igjen, rød skriftfarge,
       når ferdig, grønn skrift.
-    - bakgrunnsmusikk
+    - bakgrunnsmusikk (NB: autoavspeling av lyd er fy-fy)
     - musikk når ferdig
 */
