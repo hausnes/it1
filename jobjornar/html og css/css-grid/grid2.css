@@ -22,3 +22,11 @@
 .venstre { grid-area : v; }
 .hoyre   { grid-area : h; }
 .botn    { grid-area : b; }
+
+/* Eksempel på å bruke flexbox for å lage til en enkel meny */
+nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
