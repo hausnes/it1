@@ -20,6 +20,8 @@ body {
         ". s s s ."
         ". s s s ."
         "b b b b b";
+
+    align-items: stretch;
 }
 
 .bunn { 
@@ -35,7 +37,7 @@ body {
     background-color: yellow;
 }
 
-/* #bondesjakk {
+#bondesjakk {
     width: 50%;
     aspect-ratio: 1;
     display: grid;
@@ -57,4 +59,4 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-} */
+}
