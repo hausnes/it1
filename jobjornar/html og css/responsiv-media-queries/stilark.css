@@ -1,0 +1,47 @@
+html, body {
+    height: 100%; margin: 0; padding: 0;
+}
+
+#hoved {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "t t t t t t"
+    "v v h h h h"
+    "v v h h h h"
+    "v v h h h h"
+    "b b b b b b";
+}
+
+.topp { grid-area: t; }
+.venstre { grid-area: v; }
+.hoyre { grid-area: h; }
+.bunn { grid-area: b; }
+
+div {
+    border: 1px solid black;
+}
+
+/* 
+    Nå litt media-queries for å endre designet når en viss skjermoppløsning blir nådd:
+    https://www.w3schools.com/css/css3_mediaqueries_ex.asp 
+*/
+/* Denne trigges når skjermoppløsning er 992px eller mindre */
+@media screen and (max-width: 992px) {
+    #hoved {
+        /* height: 100%;
+        width: 100%;
+        display: grid; */
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+        "t"
+        "v"
+        "h"
+        "h"
+        "b";
+    }
+}
