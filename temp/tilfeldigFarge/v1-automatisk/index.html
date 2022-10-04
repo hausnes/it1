@@ -4,9 +4,21 @@
         <meta charset="UTF-8">
         <title>Tilfeldige fargar</title>
         <link rel="stylesheet" href="stilark.css">
-        <script src="kode.js"></script>
+        <script src="kode.js" defer></script>
     </head>
     <body>
         <!-- HTML -->
+        <div id="innstillingar"></div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <label for="inpEndringIntervall">Kor ofte skal fargen endre seg?</label><br>
+                <input type="number" id="inpEndringIntervall" placeholder="Oppgje i millisekund">
+            </div>
+        </div>
+
     </body>
 </html>
