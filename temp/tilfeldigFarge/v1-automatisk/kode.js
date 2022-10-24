@@ -35,10 +35,17 @@ function getRandomIntInclusive(min, max) {
     ----------------------------------------------------------------------
 */
 let tidsintervall = 1000;
+let fargeEndring; // Namnet på interval som endrar farge
 
-let fargeEndring = setInterval(function() {
-    endreBakgrunnsfargeRGB();
-}, tidsintervall);
+function oppstart(tidsintervall) {
+    clearInterval(fargeEndring);
+    fargeEndring = setInterval(function() {
+        endreBakgrunnsfargeRGB();
+    }, tidsintervall);
+    console.log("Endrar tidsintervall til: " + tidsintervall);
+}
+
+oppstart(tidsintervall);
 
 /*
     -----
@@ -76,12 +83,14 @@ window.onclick = function(event) {
 
     --------
 */
-// const inpEndringIntervall = document.getElementById("inpEndringIntervall");
-// inpEndringIntervall.addEventListener("change", function() {
-//     tidsintervall = parseInt(inpEndringIntervall.value);
-//     clearInterval(fargeEndring);
-//     window.fargeEndring = setInterval(function() {
+const inpEndringIntervall = document.getElementById("inpEndringIntervall");
+inpEndringIntervall.addEventListener("change", function() {
+    console.log("change")
+    tidsintervall = parseInt(inpEndringIntervall.value);
+    oppstart(tidsintervall);
+    // clearInterval(fargeEndring);
+    // window.fargeEndring = setInterval(function() {
 
-//     }, tidsintervall);
-//     console.log("Endrar tidsintervall til: " + tidsintervall)
-// });
+    // }, tidsintervall);
+    // console.log("Endrar tidsintervall til: " + tidsintervall)
+});
