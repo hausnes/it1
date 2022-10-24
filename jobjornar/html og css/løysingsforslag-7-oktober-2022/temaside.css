@@ -1,0 +1,150 @@
+html, body {
+    /* height: 100%; */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-family: 'Roboto Condensed', sans-serif; /* Frå Google Fonts */
+}
+
+body {
+    /* height: 100%; */ /* Denne fjernar me når me opplever at innhaldet blir større enn "oppstartsviduet". */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-areas:
+    "t t t t"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    "m m v h"
+    ;
+}
+
+#topp    { grid-area: t; }
+#main    { grid-area: m; }
+#venstre { grid-area: v; }
+#hoyre   { grid-area: h; }
+
+/* 'Knappen' for å gå tilbake til startsiden */
+#tilbake {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    /* display: inline-block; */
+    font-size: 16px;
+    margin: 4px 2px;
+    /* border-radius: 4%; */
+}
+
+#main a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+body > div {
+    padding: 1em;
+}
+
+#topp {
+    border-bottom: 1px solid black;
+    background-color: rgb(232, 232, 232);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Flytter elementene til høgre og venstre */
+}
+
+#topp img {
+    max-height: 20px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#main img, #main > a {
+    width: 90%;
+}
+
+/* Innhaldområde */
+#venstre, #hoyre {
+    font-size: 1em;
+    border-left: 1px solid black;
+    /* background-color: red; */
+}
+
+#venstre img, #hoyre img {
+    max-width: 80%;
+}
+
+/* Meny oppe til høgre */
+.toppHoyre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    /* font-size: 0.5em; */
+}
+
+.toppHoyre a {
+    text-decoration: none;
+    padding: 1em;
+    color: rgb(4, 170, 109);
+}
+.toppHoyre a:hover {
+    background-color: #c6e0ff;
+}
+
+.toppVenstre {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+/* Mobiltilpassing */
+@media screen and (max-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #topp {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Tabelltilpassing */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+}
+
+table tr th, table tr td {
+    padding: 0.5em;
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: #cbcbcb; 
+}
