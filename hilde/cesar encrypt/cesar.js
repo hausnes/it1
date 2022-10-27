@@ -9,6 +9,7 @@ elBtn.addEventListener("click",doEncrypt)
 function doEncrypt() {
     let elInput = document.getElementById("tocrypto")
     let aMessage = elInput.value
+    let shiftKey = parseInt(document.getElementById("cesarKey").value)
     let encryptedMessage = encrypt(aMessage, shiftKey)
     
     let elResult = document.getElementById("cryptoResult")
