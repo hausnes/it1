@@ -29,6 +29,29 @@ let hoyde = window.innerHeight;
 console.log("Høgde: " + hoyde);
 let hoydeScreen = screen.height;
 console.log("Høgde (screen): " + hoydeScreen);
-let bredde = window.innerWidth
-// Hent ut geolokasjon, sjå gjerne W3Schools...
-// ...
+let bredde = window.innerWidth;
+console.log("Bredde: " + bredde);
+let breddeScreen = screen.width;
+console.log("Bredde (screen): " + breddeScreen);
+
+// Hent ut geolokasjon, kjelde: https://www.w3schools.com/html/html5_geolocation.asp
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        utskrift.innerHTML = "Geolocation is not supported by this browser.";
+    }
+}
+
+function showPosition(position) {
+    utskrift.innerHTML = "Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+}
+
+getLocation();
+
+// Temp, test
+// let listeParagrafer = document.querySelectorAll(".test, h1");
+// console.log(listeParagrafer);
+// for(let element of listeParagrafer) {
+//     element.style.backgroundColor = "red";
+// }
