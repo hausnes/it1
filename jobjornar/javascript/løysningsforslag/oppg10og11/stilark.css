@@ -15,6 +15,29 @@ body {
 form {
     background-color: white;
     width: 400px;
-    height: 400px;
+    height: 300px;
     padding: 10px;
 }
+
+input {
+    width: 80%;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 1em;
+  }
+
+  #utskrift {
+    border: 1px solid black;
+    padding: 1em;
+  }
