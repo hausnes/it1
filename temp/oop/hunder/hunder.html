@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utskrift av hunder</title>
+</head>
+<body>
+    <script type="module">
+        import hunder from "./hunder.js";
+
+        for(const hund of hunder){
+            console.log(`${hund.navn} er en ${hund.farge} ${hund.rase} eid av ${hund.eier.navn}.`);
+        }
+
+        console.log("\nUtskrift som òg tek med seg informasjon om favorittmat (som er ein array):\n\n");
+
+        // Lager variabler som vi skal bruke i løkka
+        let utskrift = "";
+        let pronomen = "";
+        let yndlingsmat = "";
+        let i = 0;
+
+        // Lager ei løkke for å gå gjennom alle hundene
+        for(const hund of hunder){
+
+            if(hund.kjonn == "F"){
+                // Setter pronomen i utskriften til "henne" hvis hunden er hunkjønn
+                pronomen = "hennes";
+            }else{
+                // Setter pronomen i utskriften til "henne" hvis hunden ikke er hunkjønn
+                pronomen = "hans";
+            }
+            
+            // Lager ei løkke for å gå gjennom yndlingsmaten til hver hund
+            for(const mat of hund.yndlingsmat){
+            
+                if(hund.yndlingsmat.length - 2 > i){
+                    // Setter inn komma mellom elementene i utskriften  
+                    // for alle unntatt de siste to elementene i lista
+                    yndlingsmat += `${mat}, `;
+                    i++;
+                }
+                else if(hund.yndlingsmat.length - 1 > i){
+                    // Setter inn nest siste element uten komma
+                    yndlingsmat += `${mat} `;
+                    i++;
+                }else{
+                    // Setter inn "og" foran siste element
+                    yndlingsmat += `og ${mat}`;
+                    i++;
+                }
+            }
+
+            // Skriver ut til konsollen
+            console.log(`${hund.navn} er en ${hund.farge} ${hund.rase}\
+            eid av ${hund.eier.navn}. \nYndlingsmaten ${pronomen} er ${yndlingsmat}.`)
+            // Tips: \n i console.log gir linjeskift i konsollutskriften
+
+            // Nullstiller teller og utskift av yndlingsmat 
+            // før neste gjennomkjøring av løkka
+            i = 0;
+            yndlingsmat = "";
+        }
+    </script>
+</body>
+</html>

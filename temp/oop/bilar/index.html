@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP</title>
+</head>
+<body>
+    <script type="module">
+        import { navn, alder } from "./modultest.js";
+        
+        // Skriv ut verdien til variablane frå modultest.js
+        console.log(navn, alder);
+        console.log(`${navn} er ${alder} år gamal`);
+    </script>
+    <script type="module">
+        import {Bil, Elbil} from "./bil.js";
+        
+        const biler = [];
+        
+        biler.push( new Bil("Porsche", "911", "svart", 290, 0) );                  //biler[0]
+        biler.push( new Bil("Ferrari", "F8 Spider", "rød", 340, 0) );              //biler[1]
+        biler.push( new Bil("Ford", "Mustang Mach 1", "blå", 270, 0) );            //biler[2]
+        biler.push( new Elbil("Ford", "Mustang Mach e", "grå", 180, 0, 68, 100) ); //biler[3]
+        biler.push( new Elbil("Tesla", "Model 3", "hvit", 260, 0, 50, 70) );       //biler[4]
+          
+        for(let bil of biler){
+            console.log(bil.presenter());
+        }
+          
+    </script>
+</body>
+</html>
