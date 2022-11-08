@@ -19,3 +19,11 @@ for (let temp of arrayTemperaturer) {
 for (let i = 0; i < arrayTemperaturer.length; i++) {
     console.log(arrayTemperaturer[i]);
 }
+
+// Finn ut kor mange gonger det er reg. verdiar på 5 eller meir.
+
+// Finn ut kor mange gonger det er reg. verdiar på akkurat´5.
+
+// Finn ut summen av alle temperaturane.
+
+// Finn ut gjennomsnittet av alle temperaturane.
