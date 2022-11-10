@@ -16,7 +16,7 @@ function getRandomIntInclusive(min, max) {
 // Løysing på oppgåva
 let arrayTilfeldigeTall = [];
 
-for (let i = 0; i < 10000; i++) {
+for (let i = 0; i < 100; i++) {
     arrayTilfeldigeTall[i] = getRandomIntInclusive(1,20);
     //arrayTilfeldigeTall.push(getRandomIntInclusive(1,20));
 }
@@ -43,3 +43,7 @@ for (let i = 0; i < arrayTilfeldigeTall.length; i++) {
 let utskrift = document.getElementById("utskrift");
 utskrift.innerHTML = "<li>Antall 10-ere: " + antallTiere + "</li>";
 utskrift.innerHTML += "<li>Antall OVER 10: " + antallOverTi + "</li>";
+utskrift.innerHTML += "<li>Summen: " + sum + "</li>";
+
+let gjennomsnitt = sum / arrayTilfeldigeTall.length;
+utskrift.innerHTML += "<li>Gjennomsnittsverdi: " + gjennomsnitt + "</li>";
