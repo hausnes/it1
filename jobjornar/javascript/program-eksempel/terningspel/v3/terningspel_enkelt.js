@@ -1,20 +1,22 @@
 // Hentar ut elementa me treng referere til 
-var resultatUt = document.getElementById("resultatUt");
-var bilde1 = document.getElementById("bilde1"); // bilde-elementet i HTML-koden
-var bilde2 = document.getElementById("bilde2");
-var bilde3 = document.getElementById("bilde3");
-var terningarBoks = document.getElementById("terningar"); // DIV-boks som inneheld alle terningane
-var kastTerningar = document.getElementById("kastTerningar"); // Knappen som lar deg kaste
-var startSpelIgjen = document.getElementById("startSpelIgjen"); // Knappen som lar deg starte spelet på nytt
+let resultatUt = document.getElementById("resultatUt");
+let bilde1 = document.getElementById("bilde1"); // bilde-elementet i HTML-koden
+let bilde2 = document.getElementById("bilde2");
+let bilde3 = document.getElementById("bilde3");
+let terningarBoks = document.getElementById("terningar"); // DIV-boks som inneheld alle terningane
+let kastTerningar = document.getElementById("kastTerningar"); // Knappen som lar deg kaste
+let startSpelIgjen = document.getElementById("startSpelIgjen"); // Knappen som lar deg starte spelet på nytt
 
 // Verdiar for dei ulike terningane, ml. 1-6
-var tern1 = 1; var tern2 = 2; var tern3 = 3;
+let tern1 = 1; let tern2 = 2; let tern3 = 3;
 
-var antKast = 0; // Held styr på kor mange forsøk du har hatt på å kaste
-var sum = 0; // Summen av terningane som blir trilla
+let antKast = 0; // Held styr på kor mange forsøk du har hatt på å kaste
+let sum = 0; // Summen av terningane som blir trilla
 
 // Blir nokon av terningane haldt (boolean)? Ved oppstart så er ingen holdt.
-var tern1Holdt = false; var tern2Holdt = false; var tern3Holdt = false;
+let tern1Holdt = false; 
+let tern2Holdt = false; 
+let tern3Holdt = false;
 
 // Skjuler knappen for å starte spelet på nytt
 document.getElementById("startSpelIgjen").style.visibility = "hidden";
@@ -86,11 +88,11 @@ function f_trillAlleTerningar() {
 
 // Funksjon som returnerer ein verdi ml. 1-6
 function trillTerning() {
-    var tmp = Math.floor(Math.random()*6+1);
+    let tmp = Math.floor(Math.random()*6+1);
     return tmp;
 }
 
-// Viser resultatet av dei resultata ein har i det aktuelle øyeblikket ein kallar på funksjonen
+// Viser resultatet av dei kasta ein har i det aktuelle øyeblikket ein kallar på funksjonen
 // NB: Legg til eigne testar på andre ting basert på kva du ynskjer.
 function f_visResultat() {
     resultatUt.innerHTML = "Resultat: " + tern1 + ", " + tern2 + " og " + tern3 + ".<br><br>";
@@ -111,7 +113,7 @@ function f_visResultat() {
     // Legg til fleire sjekkar/kontrollar etter behov.
 }
 
-// Halde terningar
+// Halde terningar. Denne delen kan effektiviserast mykje.. ser du korleis?
 function f_haldTerning1() {
     if(tern1Holdt === true) {
         bilde1.style.border = "1px solid white"; // Fjernar den raude ramma rundt terningen; du held ikkje lenger
