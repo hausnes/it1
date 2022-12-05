@@ -36,7 +36,7 @@ html, body {
 .ga9 { grid-area: i; }
 
 .ga2 {
-    background: url(bilder/halvard.jpg);
+    background: url('bilder/presang.jpg');
     background-repeat: none;
     background-position: center;
     background-size: cover;
