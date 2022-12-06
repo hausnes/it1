@@ -24,7 +24,7 @@ for (let enkeltPris of allePrisar) { // Løkke som går gjennom alle span-taggan
 // Alternativ 2: Me kunne lagt inn ID-ar for kvar enkelt element, lagt dei i ein array og så steg-for-steg gått
 // gjennom alle desse. Litt meir tungvint, men fortsatt ein OK måte å gjere det på.
 // let arrayPrisar = [];
-// let pris1 = document.getElementById("pris1"); // NB: Eg har ikkje lagt inn noko med id lik dette
+// let pris1 = document.getElementById("pris1"); // NB: Eg har ikkje lagt inn noko med id lik dette per no
 // arrayPrisar.push(pris1);
 // let pris2 = document.getElementById("pris2");
 // arrayPrisar.push(pris2);
@@ -33,3 +33,6 @@ for (let enkeltPris of allePrisar) { // Løkke som går gjennom alle span-taggan
 // for (let i = 0; i < arrayPrisar.length; i++) {
 //     arrayPrisar[i].innerText = prisVare;
 // }
+
+// Alternativ 3: Me kunne gjort som i alternativ utan å bruke array. Tungvint jo fleire element det er snakk om, 
+// men det fungerer!

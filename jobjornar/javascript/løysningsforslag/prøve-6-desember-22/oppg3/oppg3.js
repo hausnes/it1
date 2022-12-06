@@ -1,4 +1,5 @@
 const knappReknUt = document.getElementById("knappReknUt");
+
 let inputA = document.getElementById("inputA");
 let inputB = document.getElementById("inputB");
 let inputH = document.getElementById("inputH");
@@ -23,7 +24,7 @@ function reknUtArealAvTrapes() {
         return; // Stoppar resten av funksjonen frå å køyre.
     }
 
-    arealTrapes = ((a+b)*h/2);
+    arealTrapes = ((a+b)*h)/2;
 
     resultat.innerText = "Arealet av trapeset er " + arealTrapes + ".";
 }

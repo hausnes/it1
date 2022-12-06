@@ -1,9 +1,14 @@
-let verstasjonSolheimsviken = [];
+let verstasjonSolheimsviken = []; // Eigne arrayar for kvar verstasjon
 let verstasjonDanmarksplass = [];
 
-let antallMaalingar = 1440;
+/*
+    -------------
+    Deloppgåve A:
+    -------------
+*/
 
-// Deloppgåve A:
+let antallMaalingar = 1440; // Slik at me slepp endre dette fleire stader, om naudsynt
+
 for (let i = 0; i < antallMaalingar; i++) {
     verstasjonSolheimsviken[i] = returnerTilfeldigMaaling(3,69);
     verstasjonDanmarksplass[i] = returnerTilfeldigMaaling(10,150);
@@ -22,7 +27,12 @@ function returnerTilfeldigMaaling(min, max) {
 
 console.log(verstasjonDanmarksplass); // Sjekk for å sjå om Danmarksplass har fått verdiar
 
-// Deloppgåve B:
+/*
+    ----------------------------
+    Deloppgåve B, gjennomsnitt:
+    ----------------------------
+*/
+
 let sum = 0;
 let gjennomsnitt = 0;
 
@@ -51,6 +61,12 @@ if (gjennomsnittDanmarksplass > gjennomsnittSolheimsviken) {
 else {
     console.log("Gjennomsnittverdien for Solheimsviken er høgare enn Danmarksplass.");
 }
+
+/*
+    ----------------------------------------
+    Deloppgåve B, høgaste og lågaste verdi:
+    ----------------------------------------
+*/
 
 function finnHogasteVerdi(arrayInn) {
     let max = 0;
@@ -106,7 +122,12 @@ else {
     console.log("Like minimumsverdiar for begge målestasjonar.");
 }
 
-// Deloppgåve C:
+/*
+    -------------
+    Deloppgåve C:
+    -------------
+*/
+
 function renskData(arrayInn, grenseverdi) {
     for (let i = 0; i < arrayInn.length; i++) {
         if (arrayInn[i] > grenseverdi) {
