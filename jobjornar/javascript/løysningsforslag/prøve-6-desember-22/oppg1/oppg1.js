@@ -1,10 +1,10 @@
 // Anbefalt løysing:
-let allePrisar = document.querySelectorAll("span"); // henter ut alle span-taggane på nettsida
-console.log(allePrisar); // Sjekk/test: "nodelist", alle span sin verdi - som me kan gå gjennom
+let prisVare = 299; // Endrar me denne variabelen så blir alle prisar på sida oppdatert ved neste lasting.
 
-let prisVare = 299; // Endrar me denne variabelen så blir alle prisar på sida oppdatert.
+let allePrisar = document.querySelectorAll("span"); // henter ut alle span-taggane på nettsida, som inneheld prisen (og berre den)
+console.log(allePrisar); // Sjekk/test: "nodelist", alle span sin verdi - som me kan gå/iterere gjennom - fungerer altså som ein array
 
-for (let enkeltPris of allePrisar) { // Løkke som går gjennom alle span-taggane og endrar innhaldet. 
+for (let enkeltPris of allePrisar) { // Løkke som går gjennom alle span-taggane og endrar innhaldet til oppdatert pris. 
     enkeltPris.innerText = prisVare;
 }
 
@@ -34,5 +34,5 @@ for (let enkeltPris of allePrisar) { // Løkke som går gjennom alle span-taggan
 //     arrayPrisar[i].innerText = prisVare;
 // }
 
-// Alternativ 3: Me kunne gjort som i alternativ utan å bruke array. Tungvint jo fleire element det er snakk om, 
+// Alternativ 3: Me kunne gjort som i alternativ 2 utan å bruke array. Tungvint jo fleire element det er snakk om, 
 // men det fungerer!
