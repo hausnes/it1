@@ -5,3 +5,4 @@ for (let i = 1; i < 3; i++) {
     console.log(idtemp);
     document.getElementById(idtemp).innerText = "Element nr. " + i;
 }
+
