@@ -1,6 +1,6 @@
-var mykey = config.API_KEY;
+var mykey = config.API_KEY; // https://gist.github.com/derzorngottes/3b57edc1f996dddcab25
 
-// https://rapidapi.com/unogs/api/unogs/
+// https://rapidapi.com/unogs/api/unogs/ - 100 per dag
 const options = {
 	method: 'GET',
 	headers: {

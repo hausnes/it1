@@ -6,3 +6,4 @@ jobjornar/server.properties
 .vscode/settings.json
 >>>>>>> fcfbee427d811145a0ea9006b69086958b8015b5
 jobjornar/api/netflix/config.js
+jobjornar/api/movieDB/config.js
