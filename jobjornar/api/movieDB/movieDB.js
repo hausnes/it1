@@ -28,12 +28,21 @@ function vis(filmar) {
         filmtittel.innerText = film.Title;
         let filmYear = document.createElement("p");
         filmYear.innerText = film.Year;
+        // let speletid = document.createElement("p");
+        // speletid.innerText = film.Runtime;
         let filmPoster = document.createElement("img");
         filmPoster.src = film.Poster;
+        let pauseElement = document.createElement("br");
+        let filmLenke = document.createElement("a");
+        filmLenke.href = "https://www.imdb.com/title/" + film.imdbID;
+        filmLenke.innerText = `Les om "${film.Title}" hjå IMDB`;
         // Legg til HTML-en
         filmboks.appendChild(filmtittel);
         filmboks.appendChild(filmYear);
+        // filmboks.appendChild(speletid);
         filmboks.appendChild(filmPoster);
+        filmboks.appendChild(pauseElement);
+        filmboks.appendChild(filmLenke);
         document.querySelector("#filmer").appendChild(filmboks);
     }
 }
