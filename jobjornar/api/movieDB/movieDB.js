@@ -16,12 +16,14 @@ const options = {
 // 	.catch(err => console.error(err));
 
 function vis(filmar) {
+    document.querySelector("#filmer").innerHTML = ""; // Fjerner det som ligg der frå før
     for (let film of filmar) {
         console.log(`"Filmtittel: ${film.Title}
                       Årstall: ${film.Year}
                       Poster: ${film.Poster}`
         );
         let filmboks = document.createElement("div");
+        filmboks.classList.add("film");
         let filmtittel = document.createElement("h1");
         filmtittel.innerText = film.Title;
         let filmYear = document.createElement("p");
