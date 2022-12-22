@@ -16,6 +16,7 @@ const options = {
 // 	.catch(err => console.error(err));
 
 function vis(filmar) {
+    document.querySelector("#filmer").innerHTML = "";
     for (let film of filmar) {
         console.log(`"Filmtittel: ${film.Title}
                       Årstall: ${film.Year}
