@@ -14,7 +14,7 @@ input[type=text] {
 }
 
 .film {
-    width: 400px;
+    width: 350px;
     border: 1px solid black;
     border-collapse: collapse;
     padding: 1em;
@@ -22,11 +22,13 @@ input[type=text] {
     background-color: white;
 }
 
+.film 
+
 body {
     background-color: rgb(178, 178, 178);
 }
 
-form {
+#ovreDel {
     background-color: rgb(219, 228, 255);
     padding: 1em;
 }
@@ -36,4 +38,17 @@ form {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+
+    margin-top: 1em;
 }
