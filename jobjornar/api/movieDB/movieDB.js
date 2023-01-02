@@ -27,35 +27,43 @@ function vis(filmar) {
                       Poster: ${film.Poster}`
         );
         
+        // Opprettar samleboksen for alt innhaldet
         let filmboks = document.createElement("div");
         filmboks.classList.add("film");
         
+        // Overskrift: Filmtittel (h1)
         let filmtittel = document.createElement("h1");
         filmtittel.innerText = film.Title;
         
+        // Paragraf: Produksjonsår for film
         let filmYear = document.createElement("p");
         filmYear.innerText = film.Year;
         
         // let speletid = document.createElement("p");
         // speletid.innerText = film.Runtime;
         
+        // Bilete: Poster for filmen
         let filmPoster = document.createElement("img");
         filmPoster.src = film.Poster;
         
+        // Mellomrom (br(eak))
         let pauseElement = document.createElement("br");
         
+        // Lenke: Moglegheit til å navigere til filmen på IMDB
         let filmLenke = document.createElement("a");
         filmLenke.href = "https://www.imdb.com/title/" + film.imdbID;
         filmLenke.innerText = `Les om "${film.Title}" hjå IMDB`;
         
+        // Nytt mellomrom
         let pauseElement2 = document.createElement("br");
 
+        // Knapp: For å legge til i brukaren sin "watchlist"
         let knappLeggTil = document.createElement("button");
         knappLeggTil.innerHTML = "Legg til i watchlist";
         knappLeggTil.id = film.imdbID;
         knappLeggTil.addEventListener("click", leggTilFilm);
         
-        // Legg til HTML-en
+        // Legg til HTML-en til DOM
         filmboks.appendChild(filmtittel);
         filmboks.appendChild(filmYear);
         // filmboks.appendChild(speletid);
@@ -67,6 +75,7 @@ function vis(filmar) {
 
         document.querySelector("#filmer").appendChild(filmboks);
 
+        // Unødvendig del, for testing
         let filmObj = {
             id     : film.imdbID,
             tittel : film.Title,
@@ -80,8 +89,8 @@ function vis(filmar) {
 
 // Skjema for å søke etter film
 const skjema = document.querySelector("#sokFilm");
-skjema.addEventListener("submit", sokFilm);
-skjema.addEventListener("change", sokFilm);
+skjema.addEventListener("submit", sokFilm); // Når ein trykker på knappen ved søkefeltet
+skjema.addEventListener("change", sokFilm); // Når ein trykker på enter medan ein er i søkefeltet
 
 // Funksjonen som søker etter film
 function sokFilm(event) {
@@ -100,6 +109,7 @@ function sokFilm(event) {
 
 function leggTilFilm(e) {
     console.log("Du har valgt " + e.target.id);
+    console.log("Forsøk 2: " + e.id);
     console.log("Dei valgte filmane så langt er: ");
     for (let film of valgteFilmar) {
         console.log(film);
