@@ -108,8 +108,8 @@ function sokFilm(event) {
 }
 
 function leggTilFilm(e) {
-    console.log("Du har valgt " + e.target.id);
-    console.log("Forsøk 2: " + e.id);
+    console.log("Valgt film sin ID: " + e.target.id);
+    console.log("Valgt film sin tittel: " + e.target.tittel);
     console.log("Dei valgte filmane så langt er: ");
     for (let film of valgteFilmar) {
         console.log(film);
