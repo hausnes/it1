@@ -69,10 +69,27 @@ document.body.appendChild(nyUnummerertListe);
 
 /*
     -------
-    Krav 4:
+    Krav 4: Registrere res. frå konkurransen og oppdatere total poengsum
     -------
 
 */
+const formNyttResultat = document.querySelector("#formNyttResultat");
+formNyttResultat.addEventListener("submit", regNyttResultat);
+
+function regNyttResultat(evt) {
+    evt.preventDefault();
+    let navn = document.getElementById("inpNavn").value;
+    for (let person of deltakarar) {
+        if(person.navn === navn) {
+            person.akt1 = parseInt(document.getElementById("inpAkt1").value);
+            person.akt2 = parseInt(document.getElementById("inpAkt2").value);
+            person.akt3 = parseInt(document.getElementById("inpAkt3").value);
+            person.total = reknUtTotal(person);
+        }
+    }
+    skrivUtListe();
+}
+
 function reknUtTotal(person) {
     let aktivitet1 = person.akt1;
     let aktivitet2 = person.akt2;
@@ -85,6 +102,8 @@ function reknUtTotal(person) {
 // Test for å sjå om data som er lagt inn fungerer
 console.log(deltakarar[0].total); // Test om oppdatering fungerer.
 
-for (let deltaker of deltakarar) {
-    console.log(deltaker.navn + " med poengsum " + reknUtTotal(deltaker));
+function skrivUtListe() {
+    for (let deltaker of deltakarar) {
+        console.log(deltaker.navn + " med poengsum " + deltaker.total);
+    }
 }
