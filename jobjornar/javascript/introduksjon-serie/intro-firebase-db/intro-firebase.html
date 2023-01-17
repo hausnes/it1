@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- HTML -->
+    <div id="hoved">
+        <h1>Huskeliste</h1> 
+        <ul> 
+            <!-- fylles ut av js -->
+        </ul>
+      </div>      
+
+    <!-- JS -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script>
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyDw9ulf4heNcgY520GQqEUuwgnfMzkuY00",
+          authDomain: "huskeliste-93739.firebaseapp.com",
+          projectId: "huskeliste-93739",
+          storageBucket: "huskeliste-93739.appspot.com",
+          messagingSenderId: "394163639681",
+          appId: "1:394163639681:web:7a45cc7f99593f31560480"
+        };
+        
+        // Initialize Firebase
+        //const app = initializeApp(firebaseConfig);
+        firebase.initializeApp(firebaseConfig);
+        // Lager en referanse til databasen
+        let db = firebase.firestore();
+        // Henter data. Når dataene er ferdig hentet, starter "then"-biten
+        db.collection("huskeliste").get().then((snapshot) => {
+            // Henter ut dokumentene
+            let dokumenter = snapshot.docs;
+
+            // Skriver dokumentene til konsollen
+            console.log(dokumenter);
+
+            // Går gjennom dokumentene og sender dem videre      
+            for (let i = 0; i < dokumenter.length; i++) {
+                visHuskeElement(dokumenter[i]);
+            }
+        });
+
+        let ulEl = document.querySelector("ul");
+
+        // Funksjon som viser hvert element
+        function visHuskeElement(dokument) {
+            // Lager et <li>-element
+            let liEl = document.createElement("li");
+            
+            // Legger til huskelisteteksten i <li>-elementet
+            liEl.innerHTML = dokument.data().husketekst;
+            
+            // Legger til <li>-elementet i <ul>-elementet
+            ulEl.appendChild(liEl);   
+        }
+      </script>
+</body>
+</html>
