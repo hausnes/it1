@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: red;
+            padding: 1em;
+        }
+        .ferdig {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        let overskrift = document.createElement("h1");
+        overskrift.innerText = "Wup wup!";
+        // overskrift.setAttribute("id", "overskrift");
+        overskrift.setAttribute("class", "ferdig");
+        document.body.appendChild(overskrift);
+
+        let bilete = document.createElement("img");
+        bilete.setAttribute("src", "https://www.xxl.no/filespin/c528f2279ef8423e856f381199949d5f?resize=292,292&quality=90&bgcolor=efefef");
+        document.body.appendChild(bilete);
+
+        addEventListener("keydown", function(e) {
+            console.log(e.key);
+            if(e.key == "r"){
+                document.body.removeChild(bilete);
+            }
+            // Gjer det sånn at kvar gong du trykker på ein knapp ("c" for create) så opprettar du eit element.
+            if(e.key === "c") {
+                let overskrift = document.createElement("h1");
+                overskrift.innerText = "Wup wup!";
+                // overskrift.setAttribute("id", "overskrift");
+                overskrift.setAttribute("class", "ferdig");
+                document.body.appendChild(overskrift);
+            } 
+        })
+    </script>
+</body>
+</html>
