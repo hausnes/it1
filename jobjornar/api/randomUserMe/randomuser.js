@@ -4,6 +4,9 @@ fetch('https://randomuser.me/api/?results=1')
     .then(response => behandleSvar(response))
 	.catch(err => console.error(err));
 
+// OPPGAVE: Hent 5 brukere og opprett en div-boks med
+// navn som overskrift, bilde og e-post under.
+
 function behandleSvar(svar) {
     // Testing
     console.log(svar);
