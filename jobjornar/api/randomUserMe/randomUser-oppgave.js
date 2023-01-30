@@ -24,10 +24,13 @@ function behandleSvar(svar) {
     // HTML-visning
     for(let i = 0; i < svar.results.length; i++) {
         let divBoks = document.createElement("div");
+        
         let navn = document.createElement("h1"); // Opprettar ein paragraf, men den er per no ikkje plassert
         navn.innerText = "Navn: " + svar.results[i].name.first; // Endrar innhaldet i paragrafen
+        
         let epost = document.createElement("p");
         epost.innerText = "Epost: " + svar.results[i].email;
+        
         let bilde = document.createElement("img");
         bilde.src = svar.results[i].picture.large;
 
