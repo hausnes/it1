@@ -1,3 +1,5 @@
+// Sjå den alternative JS-fila for meir avansert kall til APIet
+
 fetch('https://randomuser.me/api/?results=1')
 	.then(response => response.json())
 	// .then(response => console.log(response))
