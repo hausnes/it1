@@ -1,0 +1,20 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin-top: 2em;
+    background-color: rgb(178, 178, 178);
+    display: flex;
+    justify-content: space-between;
+}
+
+div {
+    padding: 1em;
+    border: 2px solid black;
+    width: 500px;
+    background-color: white;
+}
