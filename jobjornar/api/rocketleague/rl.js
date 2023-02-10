@@ -5,7 +5,7 @@ const options = {
 	headers: {
 		'User-Agent': 'RapidAPI Playground',
 		'Accept-Encoding': 'identity',
-		'X-RapidAPI-Key': 'mykey',
+		'X-RapidAPI-Key': mykey,
 		'X-RapidAPI-Host': 'rocket-league1.p.rapidapi.com'
 	}
 };
