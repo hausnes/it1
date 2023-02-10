@@ -3,10 +3,13 @@
     font-size: 2em;
     color: #1c87c9;
     background-color: #eee;
+    padding: 1em;
 }
 
-.custom-select option {
+/* Style each option of select in mozilla firefox   */
+.custom-select > option {
     color: #1c87c9;
     background-color: #eee;
-    padding: 1em; /* Fungerer ikkje per no.. */
+    border: 1px solid #999;
+    padding: 1em;
 }
