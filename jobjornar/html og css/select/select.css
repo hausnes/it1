@@ -1,0 +1,12 @@
+.custom-select {
+    border: 1px solid #999;
+    font-size: 2em;
+    color: #1c87c9;
+    background-color: #eee;
+}
+
+.custom-select option {
+    color: #1c87c9;
+    background-color: #eee;
+    padding: 1em; /* Fungerer ikkje per no.. */
+}
