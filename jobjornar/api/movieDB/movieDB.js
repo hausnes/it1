@@ -1,5 +1,5 @@
 // import { myKey } from './config.js'
-let mykey = config.API_KEY;
+let myKey = config.API_KEY;
 
 // https://rapidapi.com/rapidapi/api/movie-database-alternative/ - 1000 per dag
 const options = {
