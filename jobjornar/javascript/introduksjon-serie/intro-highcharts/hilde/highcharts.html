@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighChart trying</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+
+</head>
+<body>
+    <div id="weather-chart"></div>
+    <script>
+        // Sample weather data in JSON format
+const weatherData = [
+  {
+    date: "2023-04-24",
+    temperature: 20,
+    rain: 5,
+  },
+  {
+    date: "2023-04-25",
+    temperature: -22,
+    rain: 10,
+  },
+  {
+    date: "2023-04-26",
+    temperature: 19,
+    rain: 2,
+  },
+];
+
+function prepareChartData(data) {
+  const categories = [];
+  const temperatureData = [];
+  const rainData = [];
+
+  data.forEach((item) => {
+    categories.push(item.date);
+    temperatureData.push(item.temperature);
+    rainData.push(item.rain);
+  });
+
+  return { categories, temperatureData, rainData };
+}
+
+function renderWeatherChart(chartData) {
+  Highcharts.chart("weather-chart", {
+    chart: {
+      type: "column",
+    },
+    title: {
+      text: "Weather Data",
+    },
+    xAxis: {
+      categories: chartData.categories,
+    },
+    yAxis: [
+      {
+        title: {
+          text: "Temperature (°C)",
+        },
+      },
+      {
+        title: {
+          text: "Rain (mm)",
+        },
+        opposite: true,
+      },
+    ],
+    series: [
+      {
+        name: "Temperature",
+        data: chartData.temperatureData,
+        yAxis: 0,
+      },
+      {
+        name: "Rain",
+        data: chartData.rainData,
+        yAxis: 1,
+      },
+    ],
+  });
+}
+
+const chartData = prepareChartData(weatherData);
+renderWeatherChart(chartData);
+
+    </script>
+</body>
+</html>
