@@ -35,3 +35,17 @@ console.log("Etter at ny verdi er lagt til: ")
 array.splice(1,2); // Slettar første elementet i arrayen, og kunne spesifisert både start indeks og antall element me vil sletta
 // array.shift(); // Slettar første elementet i arrayen
 console.table(array);
+
+// Kopierer arrayen:
+console.log("Kopi av arrayen: ")
+let arrayKopi = array.slice();
+console.table(arrayKopi);
+
+
+
+
+// Slettar alle elementa i arrayen:
+// arrayKopi = [];
+// console.log("Etter at arrayen er sletta: ")
+// console.table(array);
+// console.table(arrayKopi);
